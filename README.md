@@ -2,6 +2,10 @@
 
 Chrome MV3 extension that intercepts `facecheck.id` responses to extract and open the original image URLs returned by search results.
 
+<p align="center">
+  <img src="./icons/icon128.png" alt="FaceCheck URL Discover logo" width="120" />
+</p>
+
 ## Features
 - Context menu with two actions: open the URL in a new tab or copy it to the clipboard.
 - Highlights results with an extracted URL and shows a tooltip with the link.
