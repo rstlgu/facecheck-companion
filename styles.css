@@ -1,0 +1,54 @@
+/* Stili per FaceCheck URL Discover */
+
+/* Evidenzia le immagini con URL estratto */
+.facediv[data-extracted-url] {
+  position: relative;
+}
+
+.facediv[data-extracted-url]::after {
+  content: '🔗';
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  font-size: 14px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+}
+
+.facediv[data-extracted-url]:hover::after {
+  opacity: 1;
+}
+
+/* Cursore per indicare che è cliccabile */
+.facediv[data-extracted-url] img {
+  cursor: pointer;
+}
+
+/* Tooltip con URL */
+.facediv[data-extracted-url]:hover::before {
+  content: attr(data-extracted-url);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  white-space: nowrap;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  z-index: 100;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
